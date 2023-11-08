@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/frontierSpaceAlien.github.io/static/css/main.8b92e21a.css",
-    "main.js": "/frontierSpaceAlien.github.io/static/js/main.5d811892.js",
-    "static/js/787.e76cd287.chunk.js": "/frontierSpaceAlien.github.io/static/js/787.e76cd287.chunk.js",
-    "static/media/NetflixSans-Regular.ttf": "/frontierSpaceAlien.github.io/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
-    "static/media/copyflix-logo.png": "/frontierSpaceAlien.github.io/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
-    "static/media/slick.svg": "/frontierSpaceAlien.github.io/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/frontierSpaceAlien.github.io/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/frontierSpaceAlien.github.io/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/frontierSpaceAlien.github.io/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/frontierSpaceAlien.github.io/index.html",
-    "main.8b92e21a.css.map": "/frontierSpaceAlien.github.io/static/css/main.8b92e21a.css.map",
-    "main.5d811892.js.map": "/frontierSpaceAlien.github.io/static/js/main.5d811892.js.map",
-    "787.e76cd287.chunk.js.map": "/frontierSpaceAlien.github.io/static/js/787.e76cd287.chunk.js.map"
+    "main.css": "/static/css/main.1fadafba.css",
+    "main.js": "/static/js/main.f0d56b89.js",
+    "static/js/787.e76cd287.chunk.js": "/static/js/787.e76cd287.chunk.js",
+    "static/media/NetflixSans-Regular.ttf": "/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
+    "static/media/copyflix-logo.png": "/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.1fadafba.css.map": "/static/css/main.1fadafba.css.map",
+    "main.f0d56b89.js.map": "/static/js/main.f0d56b89.js.map",
+    "787.e76cd287.chunk.js.map": "/static/js/787.e76cd287.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b92e21a.css",
-    "static/js/main.5d811892.js"
+    "static/css/main.1fadafba.css",
+    "static/js/main.f0d56b89.js"
   ]
 }
