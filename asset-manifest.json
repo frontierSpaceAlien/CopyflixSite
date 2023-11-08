@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1fadafba.css",
-    "main.js": "/static/js/main.f0d56b89.js",
-    "static/js/787.e76cd287.chunk.js": "/static/js/787.e76cd287.chunk.js",
-    "static/media/NetflixSans-Regular.ttf": "/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
-    "static/media/copyflix-logo.png": "/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.1fadafba.css.map": "/static/css/main.1fadafba.css.map",
-    "main.f0d56b89.js.map": "/static/js/main.f0d56b89.js.map",
-    "787.e76cd287.chunk.js.map": "/static/js/787.e76cd287.chunk.js.map"
+    "main.css": "/CopyflixSite/static/css/main.3afb6b85.css",
+    "main.js": "/CopyflixSite/static/js/main.d34760ca.js",
+    "static/js/787.e76cd287.chunk.js": "/CopyflixSite/static/js/787.e76cd287.chunk.js",
+    "static/media/NetflixSans-Regular.ttf": "/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
+    "static/media/copyflix-logo.png": "/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
+    "static/media/slick.svg": "/CopyflixSite/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/CopyflixSite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/CopyflixSite/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/CopyflixSite/index.html",
+    "main.3afb6b85.css.map": "/CopyflixSite/static/css/main.3afb6b85.css.map",
+    "main.d34760ca.js.map": "/CopyflixSite/static/js/main.d34760ca.js.map",
+    "787.e76cd287.chunk.js.map": "/CopyflixSite/static/js/787.e76cd287.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fadafba.css",
-    "static/js/main.f0d56b89.js"
+    "static/css/main.3afb6b85.css",
+    "static/js/main.d34760ca.js"
   ]
 }
