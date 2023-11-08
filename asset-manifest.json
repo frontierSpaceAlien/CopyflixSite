@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/copyflix/static/css/main.f4c4082d.css",
-    "main.js": "/copyflix/static/js/main.c07445e3.js",
-    "static/js/787.e76cd287.chunk.js": "/copyflix/static/js/787.e76cd287.chunk.js",
-    "static/media/NetflixSans-Regular.ttf": "/copyflix/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
-    "static/media/copyflix-logo.png": "/copyflix/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
-    "static/media/slick.svg": "/copyflix/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/copyflix/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/copyflix/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/copyflix/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/copyflix/index.html",
-    "main.f4c4082d.css.map": "/copyflix/static/css/main.f4c4082d.css.map",
-    "main.c07445e3.js.map": "/copyflix/static/js/main.c07445e3.js.map",
-    "787.e76cd287.chunk.js.map": "/copyflix/static/js/787.e76cd287.chunk.js.map"
+    "main.css": "/Browse/static/css/main.b94a20a9.css",
+    "main.js": "/Browse/static/js/main.4e86d9ca.js",
+    "static/js/787.e76cd287.chunk.js": "/Browse/static/js/787.e76cd287.chunk.js",
+    "static/media/NetflixSans-Regular.ttf": "/Browse/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
+    "static/media/copyflix-logo.png": "/Browse/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
+    "static/media/slick.svg": "/Browse/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Browse/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Browse/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Browse/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Browse/index.html",
+    "main.b94a20a9.css.map": "/Browse/static/css/main.b94a20a9.css.map",
+    "main.4e86d9ca.js.map": "/Browse/static/js/main.4e86d9ca.js.map",
+    "787.e76cd287.chunk.js.map": "/Browse/static/js/787.e76cd287.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4c4082d.css",
-    "static/js/main.c07445e3.js"
+    "static/css/main.b94a20a9.css",
+    "static/js/main.4e86d9ca.js"
   ]
 }
