@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/copyflix/Browse/static/css/main.21abe560.css",
-    "main.js": "/copyflix/Browse/static/js/main.9d1fcec7.js",
-    "static/js/787.e76cd287.chunk.js": "/copyflix/Browse/static/js/787.e76cd287.chunk.js",
-    "static/media/NetflixSans-Regular.ttf": "/copyflix/Browse/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
-    "static/media/copyflix-logo.png": "/copyflix/Browse/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
-    "static/media/slick.svg": "/copyflix/Browse/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/copyflix/Browse/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/copyflix/Browse/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/copyflix/Browse/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/copyflix/Browse/index.html",
-    "main.21abe560.css.map": "/copyflix/Browse/static/css/main.21abe560.css.map",
-    "main.9d1fcec7.js.map": "/copyflix/Browse/static/js/main.9d1fcec7.js.map",
-    "787.e76cd287.chunk.js.map": "/copyflix/Browse/static/js/787.e76cd287.chunk.js.map"
+    "main.css": "/copyflix/static/css/main.f4c4082d.css",
+    "main.js": "/copyflix/static/js/main.c07445e3.js",
+    "static/js/787.e76cd287.chunk.js": "/copyflix/static/js/787.e76cd287.chunk.js",
+    "static/media/NetflixSans-Regular.ttf": "/copyflix/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
+    "static/media/copyflix-logo.png": "/copyflix/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
+    "static/media/slick.svg": "/copyflix/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/copyflix/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/copyflix/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/copyflix/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/copyflix/index.html",
+    "main.f4c4082d.css.map": "/copyflix/static/css/main.f4c4082d.css.map",
+    "main.c07445e3.js.map": "/copyflix/static/js/main.c07445e3.js.map",
+    "787.e76cd287.chunk.js.map": "/copyflix/static/js/787.e76cd287.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21abe560.css",
-    "static/js/main.9d1fcec7.js"
+    "static/css/main.f4c4082d.css",
+    "static/js/main.c07445e3.js"
   ]
 }
