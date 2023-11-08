@@ -1,0 +1,164 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@font-face {
+  font-family: "NetflixSans";
+  src: local("NetflixSans"),
+   url("./fonts/NetflixSans-Regular.ttf") format("truetype");
+  }
+  
+
+body {
+  background-color:  #1a1a1a ;
+  margin: 0;
+  width: auto;
+  overflow: hidden;
+}
+h1, h2, p, ul, li, input{
+  font-family: 'NetflixSans';
+}
+.content{
+  margin: 0;
+  width: auto;
+}
+ul.header {
+  margin: 0;
+  display: flex;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  transition: background-color 400ms;
+  padding: 0 4%;
+  align-items: center;
+  height: 68px;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  position: relative;
+  padding: 10;
+  list-style: none;
+  overflow: visible;
+  background-color: #111;
+  font-size: small;
+}
+.logo {
+  display:flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.logo img {
+  object-fit: contain;
+  height: 30px;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  border: solid 1px rgba(255, 255, 255, 0.85);
+}
+.header-options {
+  display:flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+
+}
+.header-options div {
+  cursor: pointer;
+}
+.searchBox span {
+  margin-left: 2px;
+}
+
+.searchInput {
+  color: #fff;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  width: 0;
+  opacity: 0;
+  outline: none;
+  transition: width .5s;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  border: solid 1px rgba(255, 255, 255, 0.85);
+}
+
+.searchBox .searchInput {
+  width: 212px;
+  padding: 7px 14px 7px 7px;
+  opacity: 1;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+ul.header li a {
+  color: lightgrey;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+.header-options {
+  display:flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+.icon {
+  padding: 10px;
+  font-size: 1.3rem;
+  color: white;
+}
+.kidText {
+  padding: 10px;
+  font-size: 1.3rem;
+  font-size: medium;
+  color: white;
+}
+.slider{
+  padding: 0 4%;
+  position: relative ;
+  margin-bottom: 40px;
+}
+.slick-list{
+  max-width: 100vw;
+  width: 100%;
+  overflow: visible !important;
+}
+.slick-slide {
+  padding: 0 4px;
+  transition: transform 200ms ease-in-out;
+  box-sizing: border-box;
+}
+.slick-slide:hover{
+  transition-delay: 400ms;
+  transform: scale(1.5) translateY(-45px);
+}
+.slideImage{
+  width: 100%;
+}
+.slideImage:hover{
+  transition: box-shadow 500ms;
+  box-shadow: 0px 0px 5px 0px #000000;
+}
+.gap{
+  padding-top: 2%;
+ }
+ .slick-prev {
+  position: absolute;
+  left: 25px;
+  z-index: 10000;
+}
+.slick-next {
+  position: absolute;
+  right: 25px;
+  z-index: 1000;
+}
