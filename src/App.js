@@ -1,10 +1,5 @@
 import React, { useState, useRef } from "react";
-import {
-  Route,
-  NavLink,
-  BrowserRouter as Router,
-  Routes,
-} from "react-router-dom";
+import { Route, NavLink, HashRouter as Router, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBell } from "@fortawesome/free-solid-svg-icons";
 import Browse from "./pages/Browse";
