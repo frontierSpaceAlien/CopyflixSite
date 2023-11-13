@@ -12,26 +12,26 @@ export default function Browse() {
     const getData = async (e) => {
       try {
         const res = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const resP2 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const resP3 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const data = await res.json();
         const dataP2 = await resP2.json();
         const dataP3 = await resP3.json();
 
         const resTrend = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&&page=1&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const resTrend2 = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=2&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const resTrend3 = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=3&api_key=${apiKey}`
+          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
         );
         const dataTrend = await resTrend.json();
         const dataTrend2 = await resTrend2.json();

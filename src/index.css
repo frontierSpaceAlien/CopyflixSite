@@ -143,52 +143,7 @@ ul.header li a {
 .gap{
   padding-top: 2%;
  }
-.slider-left{
-  position: absolute;
-  display: flex;
-
-  background-color: black;
-  border:rgba(0, 0, 0, 0);
-  opacity: 50%;
-
-  align-items: center;
-  justify-content: center;
-  width: 4.3%;
-  top: 0;
-  height: 100%;
-  left: -4vw;
-
-
-  cursor: pointer;
-  color: #ffffff;
-  z-index: 1;
-}
-.slider-left:hover{
-  opacity: 70%;
-}
-.slider-right{
-  position: absolute;
-  display: flex;
-
-  background-color: black;
-  border:rgba(0, 0, 0, 0);
-  opacity: 50%;
-
-  align-items: center;
-  justify-content: center;
-  width: 4.1%;
-  top: 0;
-  height: 100%;
-  right: -4vw;
-
-  cursor: pointer;
-  color: #ffffff;
-  z-index: 1;
-}
-.slider-right:hover{
-  opacity: 70%;
-}
-.arrow-icon {
+/* .arrow-icon {
   color: white;
   transform: scale(5);
-}
+} */
