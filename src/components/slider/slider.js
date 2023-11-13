@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import { Icon } from "@iconify/react";
+import chevronLeft from "@iconify/icons-mdi/chevron-left";
+import chevronRight from "@iconify/icons-mdi/chevron-right";
+import chevronDownCircleOutline from "@iconify/icons-mdi/chevron-down-circle-outline";
 import styled from "styled-components";
 
 var xAxis = "0";
@@ -15,7 +19,7 @@ const StyledSlider = styled(Slider)`
       transform: scale(1.4) translateY(-54px)
         translateX(${(props) => (props.sliderX ? xAxis : (xAxis = "0"))});
       transition-delay: 400ms;
-      user-select: none;
+      user-select: none !important;
     }
   }
 `;
@@ -32,7 +36,6 @@ export default function Sliders(props) {
     slider?.current?.slickNext();
     data[sliceData].infinite = true;
     setSliderState(data[sliceData].infinite);
-    console.log(data[sliceData].infinite);
   }
 
   function onBoxClick(id) {
@@ -45,10 +48,9 @@ export default function Sliders(props) {
 
   function onHover(id) {
     xAxis = "0";
+    setSliderState((data[sliceData].infinite = sliderState));
     console.log("slider State = " + sliderState);
     console.log("infinte in array = " + data[sliceData].infinite);
-
-    data[sliceData].infinite = sliderState;
 
     for (var index = 0; index < data.length - 1; index++) {
       if (Number(id.alt) === data[index].id) {
@@ -74,7 +76,7 @@ export default function Sliders(props) {
             <div>
               <img
                 className="img"
-                src={`http://image.tmdb.org/t/p/w780${data.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w780${data.backdrop_path}`}
                 alt={data.id}
                 onClick={(e) => onBoxClick(e.currentTarget)}
                 onMouseOver={(e) => onHover(e.currentTarget)}
@@ -88,10 +90,10 @@ export default function Sliders(props) {
         className="slider-left"
         onClick={() => slider?.current?.slickPrev()}
       >
-        Prev
+        <Icon className="arrow-icon" icon={chevronLeft}></Icon>
       </button>
       <button className="slider-right" onClick={() => onSlideChange()}>
-        Next
+        <Icon className="arrow-icon" icon={chevronRight}></Icon>
       </button>
     </div>
   );
