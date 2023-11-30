@@ -1,167 +1,129 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import { Icon } from "@iconify/react";
-import chevronLeft from "@iconify/icons-mdi/chevron-left";
-import chevronRight from "@iconify/icons-mdi/chevron-right";
+import LeftControl from "../slider-control/LeftControl";
+import RightControl from "../slider-control/RightControl";
 import styled from "styled-components";
+import ImageRender from "../ImageRender";
 
 var xAxis = "0";
+var findLastSlideAmount = "0";
 const StyledSlider = styled(Slider)`
-  .img {
-    width: 100%;
-    transition: transform 200ms ease-in-out;
-    border-radius: 4px;
-    user-select: none;
+  .slick-slide {
+    padding: 0 3px;
+    box-sizing: border-box;
+    transition: box-shadow 500ms, transform 200ms ease-in-out;
+    user-select: none !important;
+    overflow: visible !important;
     &:hover {
-      transition: box-shadow 500ms transform 200ms ease-out;
-      box-shadow: 0px 0px 5px 0px #000000;
-      transform: scale(1.4) translateY(-67px)
-        translateX(${(props) => (props.sliderX ? xAxis : (xAxis = "0"))});
+      transform: scale(1.4) translateY(-34%)
+        translateX(${(props) => (props.sliderTranslateX ? xAxis : xAxis)});
       transition-delay: 400ms;
       user-select: none !important;
     }
   }
 `;
 
-const LeftButton = styled.button`
-  position: absolute;
-  display: block;
-
-  border-radius: 3px;
-  background-color: black;
-  border: rgba(0, 0, 0, 0);
-  opacity: 40%;
-
-  align-items: center;
-  justify-content: center;
-  width: 4.3%;
-  top: 0;
-  height: 100%;
-  left: -4vw;
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
-
-  cursor: pointer;
-  color: #ffffff;
-  z-index: 1;
-
-  &:hover {
-    opacity: 60%;
-  }
-`;
-
-const RightIcon = styled(Icon)`
-  color: white;
-  transition: transform 50ms linear;
-  transform: scale(${(props) => (props.visible && props.scale ? "4.5" : "4")});
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
-`;
-
-const LeftIcon = styled(Icon)`
-  color: white;
-  transition: transform 50ms linear;
-  transform: scale(${(props) => (props.visible && props.scale ? "4.5" : "4")});
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
-`;
-
-const RightButton = styled.button`
-  position: absolute;
-  display: flex;
-
-  border-radius: 4px;
-  background-color: black;
-  border: rgba(0, 0, 0, 0);
-  opacity: 40%;
-
-  align-items: center;
-  justify-content: center;
-  width: 4.1%;
-  top: 0;
-  height: 100%;
-  right: -4vw;
-
-  cursor: pointer;
-  color: #ffffff;
-  z-index: 1;
-
-  &:hover {
-    opacity: 60%;
-  }
-`;
-
 export default function Sliders(props) {
-  const { data } = props;
+  const { data, index, diffData, updateData } = props;
+  const [mediaData, setMediaData] = useState(data);
   const [sliderState, setSliderState] = useState(false);
-  const [sliderX, setSliderX] = useState(false);
+  const [sliderTranslateX, setSliderTranslateX] = useState(false);
   const [controlVisible, setControlVisible] = useState(false);
-  const [arrowRightVisible, setArrowRightVisibile] = useState(false);
-  const [arrowLeftVisible, setArrowLeftVisibile] = useState(false);
-  const [scale, setScale] = useState(false);
-  const slider = React.useRef(null);
+  const [visibleRightArrows, setVisibleRightArrows] = useState(false);
+  const [visibleLeftArrows, setVisibleLeftArrows] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const slider = useRef(null);
   const sliceData = data.length - 1;
   const settings = data[sliceData];
 
-  function onSlideChange() {
-    slider?.current?.slickNext();
-    data[sliceData].infinite = true;
-    setSliderState(data[sliceData].infinite);
-    setControlVisible(true);
-    setArrowLeftVisibile(true);
+  // When the user presses next on the slider, this function sets the slider to
+  // infinite scroll.
+  // It clones the original dataset and finds the index of which slider has been changed.
+  // It then updates the original data with new data. This prevents any state bugs since
+  // all sliders share the same states.
+  function onSlideChange(infi, i) {
+    const listLocker = JSON.parse(JSON.stringify(diffData));
+    listLocker[i][sliceData].infinite = infi;
+    updateData(listLocker);
+    setSliderState(listLocker[i][sliceData].infinite);
+    setControlVisible(infi);
   }
 
   function onBoxClick(id) {
-    console.log("Box Clicked! - " + id.alt);
+    console.log("Box Clicked! - " + id);
   }
 
-  function onMouseOut() {
-    setSliderX(false);
-    setArrowRightVisibile(false);
-    setArrowLeftVisibile(false);
+  function onMouseLeave() {
+    setSliderTranslateX(false);
+    setVisibleRightArrows(false);
+    setVisibleLeftArrows(false);
   }
 
-  function onHover(id) {
-    xAxis = "0";
-    setSliderState((data[sliceData].infinite = sliderState));
-    setArrowRightVisibile(true);
+  function onHoverRight(arrowState) {
     if (controlVisible === true) {
-      setArrowLeftVisibile(true);
+      setVisibleLeftArrows(arrowState);
+    }
+  }
+
+  function onHoverLeft(arrowState) {
+    setVisibleRightArrows(arrowState);
+  }
+
+  const onHover = (id) => {
+    setVisibleRightArrows(true);
+
+    if (controlVisible === true) {
+      setVisibleLeftArrows(true);
     }
 
-    for (var index = 0; index < data.length - 1; index++) {
+    for (let index = 0; index < data.length - 1; index++) {
       if (Number(id.alt) === data[index].id) {
-        xAxis = "0";
-        if (index % 6 === 0) {
-          setSliderX(true);
-          xAxis = "45px";
-        } else if (index % 6 === 5) {
-          setSliderX(true);
-          xAxis = "-45px";
+        // checks for uneven slide count and adjusts the css accordingly
+        // also determines if it is on the last slide.
+        if (activeSlide + 6 > sliceData) {
+          findLastSlideAmount = Math.abs(activeSlide - sliceData);
+          console.log(
+            "index if adjusting for uneven: " +
+              ((index - findLastSlideAmount) % 6)
+          );
+          if ((index - findLastSlideAmount) % 6 === 0) {
+            setSliderTranslateX(true);
+            xAxis = "14%";
+          } else if ((index - findLastSlideAmount) % 6 === 5) {
+            setSliderTranslateX(true);
+            xAxis = "-14%";
+          } else {
+            setSliderTranslateX(false);
+            xAxis = "0";
+          }
         } else {
-          setSliderX(false);
+          if (index % 6 === 0) {
+            setSliderTranslateX(true);
+            xAxis = "14%";
+          } else if (index % 6 === 5) {
+            setSliderTranslateX(true);
+            xAxis = "-14%";
+          } else {
+            setSliderTranslateX(false);
+            xAxis = "0";
+          }
         }
       }
     }
-  }
-
-  function onArrowHover() {
-    setArrowRightVisibile(true);
-    if (controlVisible === true) {
-      setArrowLeftVisibile(true);
-    }
-    setScale(true);
-    setSliderState((data[sliceData].infinite = sliderState));
-  }
-
-  function onArrowExit() {
-    setArrowRightVisibile(false);
-    setArrowLeftVisibile(false);
-    setScale(false);
-  }
+  };
 
   return (
     <div style={{ position: "relative" }}>
-      <StyledSlider sliderX={sliderX} ref={slider} {...settings}>
-        {data.slice(0, sliceData).map((data) => {
-          return (
+      <StyledSlider
+        sliderTranslateX={sliderTranslateX}
+        ref={slider}
+        {...settings}
+        beforeChange={(current, next) => {
+          setActiveSlide(next);
+        }}
+      >
+        {mediaData.slice(0, sliceData).map((data) => (
+          <div>
             <div>
               <img
                 className="img"
@@ -169,31 +131,30 @@ export default function Sliders(props) {
                 alt={data.id}
                 onClick={(e) => onBoxClick(e.currentTarget)}
                 onMouseEnter={(e) => onHover(e.currentTarget)}
-                onMouseOut={() => onMouseOut()}
+                onMouseLeave={() => onMouseLeave()}
               />
             </div>
-          );
-        })}
+            {/* <ImageRender
+              data={data}
+              onHover={(e) => onHover(e)}
+              onMouseLeave={() => onMouseLeave()}
+            ></ImageRender> */}
+          </div>
+        ))}
       </StyledSlider>
-      <LeftButton
-        onMouseOver={() => onArrowHover()}
-        onMouseOut={() => onArrowExit()}
-        visible={controlVisible}
-        onClick={() => slider?.current?.slickPrev()}
-      >
-        <LeftIcon visible={arrowLeftVisible} scale={scale} icon={chevronLeft} />
-      </LeftButton>
-      <RightButton
-        onMouseOver={() => onArrowHover()}
-        onMouseOut={() => onArrowExit()}
-        onClick={() => onSlideChange()}
-      >
-        <RightIcon
-          visible={arrowRightVisible}
-          scale={scale}
-          icon={chevronRight}
-        />
-      </RightButton>
+      <LeftControl
+        slider={slider}
+        visible={sliderState}
+        onHover={visibleLeftArrows}
+        leftArrowHover={(arrowState) => onHoverLeft(arrowState)}
+      />
+      <RightControl
+        slider={slider}
+        slideChange={(infi, i) => onSlideChange(infi, i)}
+        onHover={visibleRightArrows}
+        slideIndex={index - 1}
+        rightArrowHover={(arrowState) => onHoverRight(arrowState)}
+      />
     </div>
   );
 }

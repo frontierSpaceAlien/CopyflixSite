@@ -4,35 +4,44 @@
 @font-face {
   font-family: "NetflixSans";
   src: local("NetflixSans"),
-   url("./fonts/NetflixSans-Regular.ttf") format("truetype");
-  }
-  
+    url("./fonts/NetflixSans-Regular.ttf") format("truetype");
+}
 
 body {
-  background-color:  #1a1a1a ;
+  background-color: #111111;
   margin: 0;
   width: auto;
   overflow: hidden;
+  overflow-y: visible;
 }
-h1, h2, p, ul, li, input{
-  font-family: 'NetflixSans';
+h1,
+h2,
+p,
+ul,
+li,
+input {
+  font-family: "NetflixSans";
 }
-.content{
+.content {
   margin: 0;
   width: auto;
 }
 ul.header {
   margin: 0;
   display: flex;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
   transition: background-color 400ms;
   padding: 0 4%;
   align-items: center;
-  height: 68px;
-  z-index: 0;
+  height: 70px;
+  z-index: 1;
   top: 0;
   left: 0;
-  position: relative;
+  position: sticky;
   padding: 10;
   list-style: none;
   overflow: visible;
@@ -40,7 +49,7 @@ ul.header {
   font-size: small;
 }
 .logo {
-  display:flex;
+  display: flex;
   align-items: center;
   margin-right: 5px;
 }
@@ -55,11 +64,10 @@ ul.header {
   border: solid 1px rgba(255, 255, 255, 0.85);
 }
 .header-options {
-  display:flex;
+  display: flex;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
-
 }
 .header-options div {
   cursor: pointer;
@@ -78,7 +86,7 @@ ul.header {
   width: 0;
   opacity: 0;
   outline: none;
-  transition: width .5s;
+  transition: width 0.5s;
 }
 
 .searchBox {
@@ -107,7 +115,7 @@ ul.header li a {
   display: inline-block;
 }
 .header-options {
-  display:flex;
+  display: flex;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
@@ -123,27 +131,39 @@ ul.header li a {
   font-size: medium;
   color: white;
 }
-.slider{
+.slider {
   padding: 0 4%;
-  position: relative ;
+  position: relative;
   margin-bottom: 40px;
-  user-select: none;
+  user-select: none !important;
 }
-.slick-list{
+.slick-list {
   max-width: 100vw;
   width: 100%;
   user-select: none;
   overflow: visible !important;
 }
-.slick-slide {
-  padding: 0 4px;
-  box-sizing: border-box;
+.img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 0px #000000;
   user-select: none !important;
+  cursor: pointer;
 }
-.gap{
-  padding-top: 2%;
- }
-/* .arrow-icon {
-  color: white;
-  transform: scale(5);
-} */
+.gap {
+  padding-top: 1%;
+}
+.testImage {
+  border-radius: 4px;
+  background-color: black;
+  border: rgba(0, 0, 0, 0);
+  width: 12%;
+  position: absolute;
+  bottom: 100%;
+  cursor: pointer;
+  color: #ffffff;
+  z-index: 1000;
+}
+.menu {
+  width: 100%;
+}

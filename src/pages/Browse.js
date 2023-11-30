@@ -2,59 +2,34 @@ import React, { useState, useEffect } from "react";
 import Sliders from "../components/slider/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import apiKey from "../utils/key";
+import {
+  getGenres,
+  getPopularMovies,
+  getTrending,
+  getBrowseData,
+} from "../data/data";
+import { Skeleton } from "@mui/material";
 
 export default function Browse() {
   const [movies, setMovies] = useState([]);
   const [trending, setTrend] = useState([]);
+  const [genre, setGenre] = useState([]);
+  const [diffData, setDiffData] = useState([]);
+  let rand = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+
+  function shuffle(o) {
+    for (
+      var j, x, i = o.length;
+      i;
+      j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x
+    );
+    return o;
+  }
+  var random = shuffle(rand);
 
   useEffect(() => {
     const getData = async (e) => {
       try {
-        const res = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const resP2 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const resP3 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const data = await res.json();
-        const dataP2 = await resP2.json();
-        const dataP3 = await resP3.json();
-
-        const resTrend = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const resTrend2 = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const resTrend3 = await fetch(
-          `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
-        );
-        const dataTrend = await resTrend.json();
-        const dataTrend2 = await resTrend2.json();
-        const dataTrend3 = await resTrend3.json();
-
-        for (let i = 0; i < 20; i++) {
-          data.results.push(dataP2.results[i]);
-          if (data.results.length === 40) {
-            for (let e = 0; e < 2; e++) {
-              data.results.push(dataP3.results[e]);
-            }
-          }
-        }
-
-        for (let i = 0; i < 20; i++) {
-          dataTrend.results.push(dataTrend2.results[i]);
-          if (dataTrend.results.length === 40) {
-            for (let e = 0; e < 2; e++) {
-              dataTrend.results.push(dataTrend3.results[e]);
-            }
-          }
-        }
-
         const settings = {
           infinite: false,
           draggable: false,
@@ -63,12 +38,45 @@ export default function Browse() {
           slidesToScroll: 6,
           arrows: false,
         };
+        const [data, data2, data3] = await getPopularMovies();
+        const [trend, trend2, trend3] = await getTrending();
+        const genreGet = await getGenres();
+        var browse = [];
 
-        data.results.push(settings);
-        dataTrend.results.push(settings);
+        for (let i = 0; i < 20; i++) {
+          data.push(data2[i]);
+          if (data.length === 40) {
+            for (let e = 0; e < 2; e++) {
+              data.push(data3[e]);
+            }
+          }
+        }
 
-        setMovies(data.results);
-        setTrend(dataTrend.results);
+        for (let i = 0; i < 20; i++) {
+          trend.push(trend2[i]);
+          if (trend.length === 40) {
+            for (let e = 0; e < 2; e++) {
+              trend.push(trend3[e]);
+            }
+          }
+        }
+
+        for (var i = 0; i < 19; i++) {
+          browse.push(genreGet.genres[random[i]]);
+        }
+        const genreMovies = await getBrowseData(browse);
+
+        data.push(settings);
+        trend.push(settings);
+
+        for (let i = 0; i < genreMovies.length; i++) {
+          genreMovies[i].push(settings);
+        }
+
+        setGenre(browse);
+        setMovies(data);
+        setTrend(trend);
+        setDiffData(genreMovies);
       } catch (err) {
         console.error(err);
       }
@@ -76,13 +84,34 @@ export default function Browse() {
     getData();
   }, []);
 
+  function updateData(newData) {
+    setDiffData(newData);
+  }
+
   return (
     <div className="slider">
-      <h2 style={{ color: "lightgrey" }}> Popular on Copyflix</h2>
-      <Sliders data={movies} />
+      {/* <h2 style={{ color: "lightgrey" }}> Popular on Copyflix</h2>
+      <Sliders data={movies} index={0} diffData={diffData} />
       <div className="gap" />
       <h2 style={{ color: "lightgrey" }}> Trending Now</h2>
-      <Sliders data={trending} />
+      <Sliders data={trending} index={1} diffData={diffData} /> */}
+      {diffData.map((movie, i = 0) => {
+        return [
+          <div>
+            <div className="gap" />
+            <h2 style={{ color: "lightgrey" }}>{genre[i++].name} Movies</h2>
+            <Sliders
+              data={movie}
+              index={i++}
+              diffData={diffData}
+              updateData={(newData) => updateData(newData)}
+            />
+          </div>,
+        ];
+      })}
+      <div>
+        <h2>hello i am footer</h2>
+      </div>
     </div>
   );
 }
