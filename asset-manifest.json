@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CopyflixSite/static/css/main.15faee0f.css",
-    "main.js": "/CopyflixSite/static/js/main.6092e9dd.js",
+    "main.js": "/CopyflixSite/static/js/main.6beab2bc.js",
     "static/js/787.e76cd287.chunk.js": "/CopyflixSite/static/js/787.e76cd287.chunk.js",
     "static/media/NetflixSans-Regular.ttf": "/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
     "static/media/copyflix-logo.png": "/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/CopyflixSite/index.html",
     "main.15faee0f.css.map": "/CopyflixSite/static/css/main.15faee0f.css.map",
-    "main.6092e9dd.js.map": "/CopyflixSite/static/js/main.6092e9dd.js.map",
+    "main.6beab2bc.js.map": "/CopyflixSite/static/js/main.6beab2bc.js.map",
     "787.e76cd287.chunk.js.map": "/CopyflixSite/static/js/787.e76cd287.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15faee0f.css",
-    "static/js/main.6092e9dd.js"
+    "static/js/main.6beab2bc.js"
   ]
 }
