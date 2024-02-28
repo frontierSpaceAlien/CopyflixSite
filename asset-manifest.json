@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/https://frontierspacealien.github.io/CopyflixSite/static/css/main.28eb02c1.css",
-    "main.js": "/https://frontierspacealien.github.io/CopyflixSite/static/js/main.ab2be197.js",
+    "main.js": "/https://frontierspacealien.github.io/CopyflixSite/static/js/main.74d4f34d.js",
     "static/js/787.a190aeb3.chunk.js": "/https://frontierspacealien.github.io/CopyflixSite/static/js/787.a190aeb3.chunk.js",
     "static/media/NetflixSans-Regular.ttf": "/https://frontierspacealien.github.io/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
     "static/media/copyflix-logo.png": "/https://frontierspacealien.github.io/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/https://frontierspacealien.github.io/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/https://frontierspacealien.github.io/CopyflixSite/index.html",
     "main.28eb02c1.css.map": "/https://frontierspacealien.github.io/CopyflixSite/static/css/main.28eb02c1.css.map",
-    "main.ab2be197.js.map": "/https://frontierspacealien.github.io/CopyflixSite/static/js/main.ab2be197.js.map",
+    "main.74d4f34d.js.map": "/https://frontierspacealien.github.io/CopyflixSite/static/js/main.74d4f34d.js.map",
     "787.a190aeb3.chunk.js.map": "/https://frontierspacealien.github.io/CopyflixSite/static/js/787.a190aeb3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28eb02c1.css",
-    "static/js/main.ab2be197.js"
+    "static/js/main.74d4f34d.js"
   ]
 }
