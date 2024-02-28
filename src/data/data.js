@@ -3,7 +3,7 @@ import apiKey from "../utils/key";
 export async function getGenres() {
   try {
     const resGenre = await fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const dataGenre = await resGenre.json();
 
@@ -16,13 +16,13 @@ export async function getGenres() {
 export async function getPopularMovies() {
   try {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const resP2 = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const resP3 = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const data = await res.json();
     const dataP2 = await resP2.json();
@@ -37,13 +37,13 @@ export async function getPopularMovies() {
 export async function getTrending() {
   try {
     const resTrend = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&&page=1&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&&page=1&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const resTrend2 = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=2&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=2&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const resTrend3 = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=3&api_key=${apiKey}`
+      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=3&api_key=6a304f46872c2178f9aa2189cb4cda43`
     );
     const dataTrend = await resTrend.json();
     const dataTrend2 = await resTrend2.json();
@@ -60,7 +60,7 @@ export async function getBrowseData(genreID) {
   var browseData = [];
   for (var i = 0; i < genreID.length - 1; i++) {
     res = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=1&with_genres=${genreID[i].id}`
+      `https://api.themoviedb.org/3/discover/movie?api_key=6a304f46872c2178f9aa2189cb4cda43&page=1&with_genres=${genreID[i].id}`
     );
     // const res2 = await fetch(
     //   `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=2&with_genres=${genreID}`

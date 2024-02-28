@@ -1,10 +1,5 @@
 import React, { useState, useRef } from "react";
-import {
-  Route,
-  NavLink,
-  HashRouter as Router,
-  Routes,
-} from "react-router-dom";
+import { Route, NavLink, HashRouter as Router, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBell } from "@fortawesome/free-solid-svg-icons";
 import Browse from "./pages/Browse";
@@ -80,7 +75,7 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Browse />} />
-            <Route path="/TVShows" element={<TVShows />} />
+            <Route exact path="/TVShows" element={<TVShows />} />
           </Routes>
         </div>
       </div>
