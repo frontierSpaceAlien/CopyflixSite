@@ -6,7 +6,7 @@ import styled from "styled-components";
 const RightIcon = styled(Icon)`
   color: white;
   transition: transform 50ms linear;
-  transform: scale(${(props) => (props.visible && props.scale ? "5" : "4")});
+  transform: scale(${(props) => (props.visible && props.scale ? "6" : "5")});
   visibility: ${(props) =>
     props.visible || props.visiblearrow ? "visible" : "hidden"};
 `;
@@ -14,6 +14,7 @@ const RightIcon = styled(Icon)`
 const RightButton = styled.button`
   position: absolute;
   display: flex;
+  visibility: ${(props) => (props.skeletonVisible ? "visible" : "hidden")};
 
   border-radius: 4px;
   background-color: black;
@@ -22,7 +23,7 @@ const RightButton = styled.button`
 
   align-items: center;
   justify-content: center;
-  width: 4.2%;
+  width: 4.31%;
   top: 0;
   height: 100%;
   right: -4vw;
@@ -37,7 +38,14 @@ const RightButton = styled.button`
 `;
 
 export default function RightControl(props) {
-  const { slider, slideChange, onHover, rightArrowHover, slideIndex } = props;
+  const {
+    skeletonVisible,
+    slider,
+    slideChange,
+    onHover,
+    rightArrowHover,
+    slideIndex,
+  } = props;
   const [arrowRightVisible, setArrowRightVisibile] = useState(false);
   const [scale, setScale] = useState(false);
 
@@ -60,6 +68,7 @@ export default function RightControl(props) {
 
   return (
     <RightButton
+      skeletonVisible={skeletonVisible}
       onMouseOver={() => onArrowHover()}
       onMouseOut={() => onArrowExit()}
       onClick={() => onSlideChange()}

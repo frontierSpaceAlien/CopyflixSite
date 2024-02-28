@@ -34,11 +34,11 @@ const LeftIcon = styled(Icon)`
   transition: transform 50ms linear;
   visibility: ${(props) =>
     props.visible || props.visiblearrow ? "visible" : "hidden"};
-  transform: scale(${(props) => (props.visible && props.scale ? "5" : "4")});
+  transform: scale(${(props) => (props.visible && props.scale ? "6" : "5")});
 `;
 
 export default function LeftControl(props) {
-  const { slider, visible, onHover, leftArrowHover } = props;
+  const { skeletonVisible, slider, visible, onHover, leftArrowHover } = props;
   const [arrowLeftVisible, setArrowLeftVisibile] = useState(false);
   const [scale, setScale] = useState(false);
 

@@ -2,17 +2,17 @@ import React, { useState, useRef } from "react";
 import {
   Route,
   NavLink,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBell } from "@fortawesome/free-solid-svg-icons";
 import Browse from "./pages/Browse";
+import TVShows from "./pages/TVShows";
 import logo from "./assets/logo/copyflix-logo.png";
 
 const App = () => {
   const [searchBox, setSearchBox] = useState(false);
-  const [stickyNav, setStickyNav] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const inputRef = useRef(null);
 
@@ -24,7 +24,7 @@ const App = () => {
   };
 
   return (
-    <Router basename="/Browse">
+    <Router>
       <div>
         <ul className="header">
           <li>
@@ -80,6 +80,7 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Browse />} />
+            <Route path="/TVShows" element={<TVShows />} />
           </Routes>
         </div>
       </div>
