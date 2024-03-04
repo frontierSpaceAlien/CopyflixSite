@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/frontierSpaceAlien/CopyflixSite/static/css/main.1f174ed7.css",
-    "main.js": "/frontierSpaceAlien/CopyflixSite/static/js/main.a997ad85.js",
-    "static/js/787.a190aeb3.chunk.js": "/frontierSpaceAlien/CopyflixSite/static/js/787.a190aeb3.chunk.js",
-    "static/media/NetflixSans-Regular.ttf": "/frontierSpaceAlien/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
-    "static/media/copyflix-logo.png": "/frontierSpaceAlien/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
-    "static/media/slick.svg": "/frontierSpaceAlien/CopyflixSite/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/frontierSpaceAlien/CopyflixSite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/frontierSpaceAlien/CopyflixSite/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/frontierSpaceAlien/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/frontierSpaceAlien/CopyflixSite/index.html",
-    "main.1f174ed7.css.map": "/frontierSpaceAlien/CopyflixSite/static/css/main.1f174ed7.css.map",
-    "main.a997ad85.js.map": "/frontierSpaceAlien/CopyflixSite/static/js/main.a997ad85.js.map",
-    "787.a190aeb3.chunk.js.map": "/frontierSpaceAlien/CopyflixSite/static/js/787.a190aeb3.chunk.js.map"
+    "main.css": "/CopyflixSite/static/css/main.742d553a.css",
+    "main.js": "/CopyflixSite/static/js/main.41857d8a.js",
+    "static/js/787.a190aeb3.chunk.js": "/CopyflixSite/static/js/787.a190aeb3.chunk.js",
+    "static/media/NetflixSans-Regular.ttf": "/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
+    "static/media/copyflix-logo.png": "/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
+    "static/media/slick.svg": "/CopyflixSite/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/CopyflixSite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/CopyflixSite/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/CopyflixSite/index.html",
+    "main.742d553a.css.map": "/CopyflixSite/static/css/main.742d553a.css.map",
+    "main.41857d8a.js.map": "/CopyflixSite/static/js/main.41857d8a.js.map",
+    "787.a190aeb3.chunk.js.map": "/CopyflixSite/static/js/787.a190aeb3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f174ed7.css",
-    "static/js/main.a997ad85.js"
+    "static/css/main.742d553a.css",
+    "static/js/main.41857d8a.js"
   ]
 }
