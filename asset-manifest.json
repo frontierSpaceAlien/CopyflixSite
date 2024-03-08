@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CopyflixSite/static/css/main.b300b099.css",
-    "main.js": "/CopyflixSite/static/js/main.f0774ccd.js",
+    "main.js": "/CopyflixSite/static/js/main.527e4341.js",
     "reactPlayerYouTube.js": "/CopyflixSite/static/js/reactPlayerYouTube.ba3d8b66.chunk.js",
     "reactPlayerSoundCloud.js": "/CopyflixSite/static/js/reactPlayerSoundCloud.75d8623b.chunk.js",
     "reactPlayerVimeo.js": "/CopyflixSite/static/js/reactPlayerVimeo.2b3b9219.chunk.js",
@@ -17,6 +17,7 @@
     "reactPlayerFilePlayer.js": "/CopyflixSite/static/js/reactPlayerFilePlayer.93b88808.chunk.js",
     "reactPlayerPreview.js": "/CopyflixSite/static/js/reactPlayerPreview.29c8d9a5.chunk.js",
     "static/js/787.a190aeb3.chunk.js": "/CopyflixSite/static/js/787.a190aeb3.chunk.js",
+    "static/media/Shrek.mp4": "/CopyflixSite/static/media/Shrek.6eec675fdd4cbaffd5f3.mp4",
     "static/media/NetflixSans-Regular.ttf": "/CopyflixSite/static/media/NetflixSans-Regular.d88f3e94892f428b2d69.ttf",
     "static/media/copyflix-logo.png": "/CopyflixSite/static/media/copyflix-logo.65b967fe9b18e1023e5e.png",
     "static/media/slick.svg": "/CopyflixSite/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -25,7 +26,7 @@
     "static/media/slick.woff": "/CopyflixSite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/CopyflixSite/index.html",
     "main.b300b099.css.map": "/CopyflixSite/static/css/main.b300b099.css.map",
-    "main.f0774ccd.js.map": "/CopyflixSite/static/js/main.f0774ccd.js.map",
+    "main.527e4341.js.map": "/CopyflixSite/static/js/main.527e4341.js.map",
     "reactPlayerYouTube.ba3d8b66.chunk.js.map": "/CopyflixSite/static/js/reactPlayerYouTube.ba3d8b66.chunk.js.map",
     "reactPlayerSoundCloud.75d8623b.chunk.js.map": "/CopyflixSite/static/js/reactPlayerSoundCloud.75d8623b.chunk.js.map",
     "reactPlayerVimeo.2b3b9219.chunk.js.map": "/CopyflixSite/static/js/reactPlayerVimeo.2b3b9219.chunk.js.map",
@@ -44,6 +45,6 @@
   },
   "entrypoints": [
     "static/css/main.b300b099.css",
-    "static/js/main.f0774ccd.js"
+    "static/js/main.527e4341.js"
   ]
 }
